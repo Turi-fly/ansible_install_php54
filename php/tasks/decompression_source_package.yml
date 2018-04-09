@@ -1,0 +1,68 @@
+---
+# Decompression related source packages
+# 2018-04-08 19:17 by liubaobao at WDTY company
+
+- name: Decompression related php54 source packages
+  unarchive: src=/tmp/{{ PHP54 }}.tgz dest=/tmp/ copy=no
+  ignore_errors: True
+  tags: unarchivephp54
+
+#Decompression php54 freetype complice package
+- name: Decompression related php54 freetype complice packages
+  unarchive: src=/tmp/{{ FREETYPE }}.tgz dest=/tmp/ copy=no
+  ignore_errors: True
+  tags: unarchivefreetype
+
+#Decompression php54 memcached extend
+- name: Decompression related php54 memcached source packages
+  unarchive: src=/tmp/{{ MEMCACHED }}.tgz dest=/tmp/ copy=no
+  ignore_errors: True
+  tags: unarchivememcached
+
+#Decompression php54 redis extend
+- name: Decompression related php54 redis source packages
+  unarchive: src=/tmp/{{ REDIS }}.tgz dest=/tmp/ copy=no
+  ignore_errors: True
+  tags: unarchiveredis
+
+#Decompression php54 ssh2 extend
+- name: Decompression related php54 ssh2 source packages
+  unarchive: src=/tmp/{{ SSH2 }}.tgz dest=/tmp/ copy=no
+  ignore_errors: True
+  tags: unarchivessh2
+
+#Decompression php54 swoole extend
+- name: Decompression related php54 swoole source packages
+  unarchive: src=/tmp/{{ SWOOLE }}.tgz dest=/tmp/ copy=no
+  ignore_errors: True
+  tags: unarchiveswoole
+
+#Decompression php54 yaf extend
+- name: Decompression related php54 yaf source packages
+  unarchive: src=/tmp/{{ YAF }}.tgz dest=/tmp/ copy=no
+  ignore_errors: True
+  tags: unarchiveyaf
+
+#Decompression php54 yar extend
+- name: Decompression related php54 yar source packages
+  unarchive: src=/tmp/{{ YAR }}.tgz dest=/tmp/ copy=no
+  ignore_errors: True
+  tags: unarchiveyar
+
+#Decompression php54 zendopcache extend
+- name: Decompression related php54 zendopcache source packages
+  unarchive: src=/tmp/{{ ZENDOPCACHE }}.tgz dest=/tmp/ copy=no
+  ignore_errors: True
+  tags: unarchivezendopcache
+
+#Decompression php54 gearman extend
+- name: Decompression related php54 gearman source packages
+  unarchive: src=/tmp/{{ GEARMAN }}.tgz dest=/tmp/ copy=no
+  ignore_errors: True
+  tags: unarchivegearman
+
+#Decompression php54 imagick extend
+- name: Decompression related php54 imagick source packages
+  unarchive: src=/tmp/{{ IMAGICK }}.tgz dest=/tmp/ copy=no
+  ignore_errors: True
+  tags: unarchiveimagick

@@ -1,0 +1,69 @@
+---
+# Publisher synchronization php54 source package and extend packages to the installation remote machine
+# 2018-04-08 19:05 by liubaobao at WDTY company
+
+
+- name: Unarchive PHP54 Sorce Code to Remote Machice
+  copy: src={{ PHP54 }}.tgz dest=/tmp/{{ PHP54 }}.tgz owner=yx group=yx mode=0644
+  ignore_errors: True
+  tags: syncphp7
+
+ #Complice pack for php54 Freetype
+- name: Unarchive PHP54 complice freetype package to Remote Machice
+  copy: src={{ FREETYPE }}.tgz dest=/tmp/{{ FREETYPE }}.tgz owner=yx group=yx mode=0644
+  ignore_errors: True
+  tags: syncfreetype
+
+#Extension pack for php54 memcached
+- name: Unarchive PHP54 memcached extend package to Remote Machice
+  copy: src={{ MEMCACHED }}.tgz dest=/tmp/{{ MEMCACHED }}.tgz owner=yx group=yx mode=0644
+  ignore_errors: True
+  tags: syncmemcached
+
+#Extension pack for php54 redis
+- name: Unarchive PHP54 redis extend package to Remote Machice
+  copy: src={{ REDIS }}.tgz dest=/tmp/{{ REDIS }}.tgz owner=yx group=yx mode=0644
+  ignore_errors: True
+  tags: syncredis
+
+#Extension pack for php54 ssh2
+- name: Unarchive PHP54 ssh2 extend package to Remote Machice
+  copy: src={{ SSH2 }}.tgz dest=/tmp/{{ SSH2 }}.tgz owner=yx group=yx mode=0644
+  ignore_errors: True
+  tags: syncssh2
+
+#Extension pack for php54 swoole
+- name: Unarchive PHP54 swoole extend package to Remote Machice
+  copy: src={{ SWOOLE }}.tgz dest=/tmp/{{ SWOOLE }}.tgz owner=yx group=yx mode=0644
+  ignore_errors: True
+  tags: syncswoole
+
+#Extension pack for php54 yaf
+- name: Unarchive PHP54 yaf extend package to Remote Machice
+  copy: src={{ YAF }}.tgz dest=/tmp/{{ YAF }}.tgz owner=yx group=yx mode=0644
+  ignore_errors: True
+  tags: syncyaf
+
+#Extension pack for php54 yar
+- name: Unarchive PHP54 yar extend package to Remote Machice
+  copy: src={{ YAR }}.tgz dest=/tmp/{{ YAR }}.tgz owner=yx group=yx mode=0644
+  ignore_errors: True
+  tags: syncyar
+
+#Extension pack for zendopcache
+- name: Unarchive PHP54 zendopcache extend package to Remote Machice
+  copy: src={{ ZENDOPCACHE }}.tgz dest=/tmp/{{ ZENDOPCACHE }}.tgz owner=yx group=yx mode=0644
+  ignore_errors: True
+  tags: synczendopcache
+
+#Extension pack for gearman
+- name: Unarchive PHP54 gearman extend package to Remote Machice
+  copy: src={{ GEARMAN }}.tgz dest=/tmp/{{ GEARMAN }}.tgz owner=yx group=yx mode=0644
+  ignore_errors: True
+  tags: syncgearman
+
+#Extension pack for imagick
+- name: Unarchive PHP54 imagick extend package to Remote Machice
+  copy: src={{ IMAGICK }}.tgz dest=/tmp/{{ IMAGICK }}.tgz owner=yx group=yx mode=0644
+  ignore_errors: True
+  tags: syncimagick

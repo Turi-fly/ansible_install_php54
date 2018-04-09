@@ -1,0 +1,26 @@
+---
+# Perform source code compilation and installation php54
+# 2018-04-08 20:30 by liubaobao at WDTY company
+
+
+- name: Create a few install directories
+  file: path=/home/yx/server/php54/{{ item }} recurse=true state=directory owner=yx group=yx mode=0755
+  with_items:
+    - log
+  ignore_errors: True
+  tags: createdir
+
+- name: Configure the build.
+  command: ./configure {{ PHPCONFIGURE }}
+  args:
+    chdir: /tmp/{{ PHP54 }}/
+
+- name: Build PHP54
+  command: make -j 4
+  args:
+    chdir: /tmp/{{ PHP54 }}/
+
+- name: Install PHP54
+  command: make install
+  args:
+    chdir: /tmp/{{ PHP54 }}/

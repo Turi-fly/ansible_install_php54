@@ -1,0 +1,24 @@
+---
+#Install gearman extension for php
+##2018-04-06 12:07 by liubaobao at WDTY company
+
+
+- name: Load gearman extend
+  command: /home/yx/server/php54/bin/phpize
+  args:
+    chdir: /tmp/{{ GEARMAN }}/
+
+- name: Configure the build
+  command: ./configure {{ PHPCOMCONFiGURE }}
+  args:
+    chdir: /tmp/{{ GEARMAN }}/
+
+- name: Build gearman extend
+  command: make -j
+  args:
+    chdir: /tmp/{{ GEARMAN }}/
+
+- name: Install gearman extend
+  command: make install
+  args:
+    chdir: /tmp/{{ GEARMAN }}/

@@ -1,0 +1,18 @@
+---
+# tasks file for ansible_install_php54
+# 2018-04-08 23:05 by liubaobao at WDTY company
+
+- include: sync_php54_source_code.yml
+- include: decompression_source_package.yml
+- include: compile_package_install_forphp54.yml
+- include: php_install.yml
+- include: install_memcached_extend.yml
+- include: install_redis_extend.yml
+- include: install_swoole_extend.yml
+- include: install_yaf_extend.yml
+- include: install_yar_extend.yml
+- include: install_zendopcache_extend.yml
+- include: install_gearman_extend.yml
+- include: install_imagick_extend.yml
+- include: sync_conf.yml
+- include: restart_phpfpm.yml

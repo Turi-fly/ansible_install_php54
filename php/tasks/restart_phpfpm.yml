@@ -1,0 +1,13 @@
+---
+#start php for script
+# 2018-04-08 22:39:52 by liubaobao at WDTY company
+
+
+- name: change script execute permission
+  file: dest=/home/yx/server/php54/{{ PHPSH }} mode=a+x
+
+- name: change directory owner group
+  command: chown yx.yx -R /home/yx/server/php54
+
+- name: Start php
+  shell: /home/yx/server/php54/{{ PHPSH }} start

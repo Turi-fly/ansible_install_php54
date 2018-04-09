@@ -1,0 +1,20 @@
+---
+# vars file for ansible_install_php54
+
+PHP54: php-5.4.22
+REDIS: redis-2.2.4
+SSH2: ssh2-0.13
+SWOOLE: swoole-1.9.16
+YAF: yaf
+MEMCACHED: memcached-2.1.0
+YAR: yar-1.2.5
+ZENDOPCACHE: zendopcache-7.0.2
+GEARMAN: gearman-1.1.0
+IMAGICK: imagick-3.4.3
+FREETYPE: freetype-2.4.11
+PHPCONFIGURE: --prefix=/home/yx/server/php54 --enable-cli --with-libxml-dir=/usr/include/libxml2/libxml/ --with-kerberos=/usr/ --enable-bcmath --enable-calendar --enable-fpm --with-mcrypt --enable-soap --enable-exif --enable-pdo --with-pdo-mysql=mysqlnd --with-mysql-sock --with-curl=/usr/include/curl/ --enable-ftp --enable-mbstring --enable-gd-native-ttf --with-freetype-dir=/usr/include/freetype2/freetype/ --disable-debug --disable-rpath --enable-inline-optimization --with-bz2 --with-zlib=/usr/ --enable-sockets --enable-sysvsem --enable-sysvshm --enable-pcntl --enable-mbregex --with-mhash --enable-zip --with-pcre-regex --with-mysqli=mysqlnd --with-gd --with-jpeg-dir --with-png-dir --with-openssl --with-mysqli=mysqlnd
+PHPMEMCONFIGURE: --disable-memcached-sasl
+PHPCOMCONFiGURE: --with-php-config=/home/yx/server/php54/bin/php-config
+PHPFPMCONF: php-fpm.conf
+PHPSH: php-fpm.sh
+PHPCONF: php.ini
